@@ -49,7 +49,7 @@ IT INFRASTRUCTURE & ENGINEERING
 │   │   ├── Users
 │   │   ├── Groups
 │   │   ├── Permissions
-│   │   ├── ACL
+│   │   ├── [[ACL — Access Control List|ACL]]
 │   │   ├── Processes
 │   │   ├── Services
 │   │   ├── systemd
