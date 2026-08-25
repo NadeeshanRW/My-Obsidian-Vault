@@ -41,10 +41,10 @@ IT INFRASTRUCTURE & ENGINEERING
 │   │
 │   ├── 01.1 Linux
 │   │   ├── |Ubuntu]]
-│   │   ├── |Debian]]
-│   │   ├── |RHEL]]
+│   │   ├── [[Linux Distributions|Debian]]
+│   │   ├── [[Linux Distributions#01.4 RHEL|RHEL]]
+│   │   ├── [[Linux Distributions#01.6 AlmaLinux|Alma]]
 │   │   └── [[Linux Distributions#01.5 Rocky Linux|Rocky]]
-│   │   ├── |Alma]]
 │   │
 │   ├── 01.2 Linux Administration
 │   │   ├── Users
