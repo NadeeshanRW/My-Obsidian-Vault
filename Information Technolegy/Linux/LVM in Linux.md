@@ -1,4 +1,4 @@
-# LVM in Linux — සම්පූර්ණයෙන් තේරුම් ගමු
+
 
 **LVM = Logical Volume Manager**
 
