@@ -30,7 +30,7 @@ IT INFRASTRUCTURE & ENGINEERING
 │   │   └── Encoding
 │   │
 │   └── 00.4 Virtualization Concepts
-│       ├── Hypervisor
+│       ├── [[Virtualization#1. Hypervisor|Hypervisor]]
 │       ├── VM
 │       ├── Virtual Network
 │       ├── Virtual Storage
