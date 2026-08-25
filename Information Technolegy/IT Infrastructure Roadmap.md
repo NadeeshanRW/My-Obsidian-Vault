@@ -40,8 +40,8 @@ IT INFRASTRUCTURE & ENGINEERING
 ├── 01. LINUX & SYSTEM ENGINEERING
 │   │
 │   ├── 01.1 Linux
-│   │   ├── |Ubuntu]]
-│   │   ├── [[Linux Distributions|Debian]]
+│   │   ├── [[Linux Distributions#01.3 Ubuntu|Ubuntu]]
+│   │   ├── [[Linux Distributions#01.2 Debian|Debian]]
 │   │   ├── [[Linux Distributions#01.4 RHEL|RHEL]]
 │   │   ├── [[Linux Distributions#01.6 AlmaLinux|Alma]]
 │   │   └── [[Linux Distributions#01.5 Rocky Linux|Rocky]]
