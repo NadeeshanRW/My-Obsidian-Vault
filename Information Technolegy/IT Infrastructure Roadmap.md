@@ -40,10 +40,10 @@ IT INFRASTRUCTURE & ENGINEERING
 ├── 01. LINUX & SYSTEM ENGINEERING
 │   │
 │   ├── 01.1 Linux
-│   │   ├── Ubuntu
-│   │   ├── Debian
-│   │   ├── RHEL
-│   │   └── Rocky / AlmaLinux
+│   │   ├── |Ubuntu]]
+│   │   ├── |Debian]]
+│   │   ├── |RHEL]]
+│   │   └── [[Linux Distributions|Rocky / AlmaLinux]]
 │   │
 │   ├── 01.2 Linux Administration
 │   │   ├── Users
