@@ -43,7 +43,7 @@ IT INFRASTRUCTURE & ENGINEERING
 │   │   ├── |Ubuntu]]
 │   │   ├── |Debian]]
 │   │   ├── |RHEL]]
-│   │   └── [[Linux Distributions|Rocky / AlmaLinux]]
+│   │   └── [[Linux Distributions#01.5 Rocky Linux|Rocky / AlmaLinux]]
 │   │
 │   ├── 01.2 Linux Administration
 │   │   ├── Users
