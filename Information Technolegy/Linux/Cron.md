@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Linux වල `cron` සහ `crontab` — සම්පූර්ණ පැහැදිලි කිරීම
 
 Linux System Administration වල **Cron** කියන්නේ ඉතාම වැදගත් concept එකක්. Server එකක අපිට යම් task එකක් **automatically, specified time එකකදී** run කරවන්න Cron භාවිතා කරනවා.
