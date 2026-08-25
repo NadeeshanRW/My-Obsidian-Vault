@@ -18,7 +18,7 @@ IT INFRASTRUCTURE & ENGINEERING
 │   │   ├── Processes
 │   │   ├── Threads
 │   │   ├── Memory
-│   │   ├──[[Linux Filesystems|Filesystems]]
+│   │   ├── Filesystems
 │   │   ├── System Calls
 │   │   └── Drivers
 │   │
@@ -67,7 +67,7 @@ IT INFRASTRUCTURE & ENGINEERING
 │   │   └── Network Troubleshooting
 │   │
 │   ├── 01.4 Linux Storage
-│   │   ├── Filesystems
+│   │   ├── [[Linux Filesystems|Filesystems]]
 │   │   ├── Partitions
 │   │   ├── LVM
 │   │   ├── RAID
