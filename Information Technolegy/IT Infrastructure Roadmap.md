@@ -39,7 +39,7 @@ IT INFRASTRUCTURE & ENGINEERING
 │
 ├── 01. LINUX & SYSTEM ENGINEERING
 │   │
-│   ├── [[IT I]]
+│   ├── 01.1 Linux
 │   │   ├── [[Linux Distributions#01.3 Ubuntu|Ubuntu]]
 │   │   ├── [[Linux Distributions#01.2 Debian|Debian]]
 │   │   ├── [[Linux Distributions#01.4 RHEL|RHEL]]
