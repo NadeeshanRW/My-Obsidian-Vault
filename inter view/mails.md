@@ -623,3 +623,181 @@ You can use these sentences at the end of your technical support emails.
 - Looking forward to your confirmation.
     
 - Please feel free to contact us if you have any questions.
+  
+  
+  
+  # 1. Oracle Database Connection එකක මූලික කොටස්
+
+Oracle DB එකකට application එකක් හෝ client එකක් connect වෙන්න මේ තොරතුරු අවශ්‍ය වෙනවා.
+
+|Keyword|Meaning|Example|
+|---|---|---|
+|Host|Database server එකේ IP / hostname|`192.168.1.100`|
+|Port|Oracle listener එකේ port|`1521`|
+|Service Name|Connect වෙන්න අවශ්‍ය database service එක|`ORCLPDB`|
+|SID|Oracle database instance identifier|`ORCL`|
+|Username|Database user|`app_user`|
+|Password|Database user password|`password123`|
+
+මතක තියාගන්න: Host කියන්නේ server එක. Port කියන්නේ connection එකට භාවිතා කරන network port එක. Service Name කියන්නේ Oracle database service එක හඳුනාගන්න භාවිතා කරන නම.
+
+# 2. Oracle Connection String වර්ග
+
+මේ දෙක විශේෂයෙන්ම දැනගන්න ඕනේ.
+
+A. Service Name භාවිතයෙන් connect වීම
+
+```
+hostname:1521/service_name
+```
+
+Example:
+
+```
+192.168.1.100:1521/ORCLPDB
+```
+
+JDBC connection string:
+
+```
+jdbc:oracle:thin:@//192.168.1.100:1521/ORCLPDB
+```
+
+B. SID භාවිතයෙන් connect වීම
+
+```
+hostname:1521:SID
+```
+
+Example:
+
+```
+192.168.1.100:1521:ORCL
+```
+
+JDBC connection string:
+
+```
+jdbc:oracle:thin:@192.168.1.100:1521:ORCL
+```
+
+Service Name vs SID
+
+|Service Name|SID|
+|---|---|
+|Database service එක හඳුනාගනී|Database instance එක හඳුනාගනී|
+|Services සඳහා භාවිතා වේ|Instance identification සඳහා භාවිතා වේ|
+|`@//host:1521/service`|`@host:1521:SID`|
+
+Modern Oracle environments වල Service Name භාවිතය බහුලයි.
+
+Oracle Listener කියන්නේ client/application එකකින් එන database connection requests භාරගන්න Oracle Database server එකේ network service එකක්.
+
+උදාහරණයක්:
+
+1. Application එක `192.168.1.100` වෙත connection request එකක් යවනවා.
+    
+2. Request එක `1521` port එකට යනවා.
+    
+3. Oracle Listener request එක භාරගන්නවා.
+    
+4. Service Name එක අනුව අදාළ database service එකට connection එක route කරනවා.
+    
+
+වැදගත් keywords:
+
+|Keyword|Description|
+|---|---|
+|Listener|Incoming DB connections භාරගනී|
+|Listener.ora|Listener configuration file|
+|Tnsnames.ora|Database connection aliases store කරන file|
+|Sqlnet.ora|Oracle Net connection configuration|
+|TNS|Transparent Network Substrate|
+|TNS Alias|Connection එකට භාවිතා කරන friendly name|
+
+# 4. Oracle Configuration Files
+
+මේ තුන exam එකට වැදගත්.
+
+1. listener.ora
+
+Listener එකේ configuration එක.
+
+Location:
+
+```
+$ORACLE_HOME/network/admin/listener.ora
+```
+
+2. tnsnames.ora
+
+Database connection details alias එකක් යටතේ save කරනවා.
+
+Example:
+
+```
+ORCLDB =
+  (DESCRIPTION =
+    (ADDRESS =
+      (PROTOCOL = TCP)
+      (HOST = 192.168.1.100)
+      (PORT = 1521)
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = ORCLPDB)
+    )
+  )
+```
+
+දැන් `ORCLDB` කියන alias එකෙන් connect වෙන්න පුළුවන්.
+
+```
+sqlplus app_user/password@ORCLDB
+```
+
+3. sqlnet.ora
+
+Oracle Net connection behavior සහ authentication වැනි settings configure කරන file එක.
+
+# 5. වැදගත් Oracle Commands
+
+|Command|Purpose|
+|---|---|
+|`lsnrctl status`|Listener status බලන්න|
+|`lsnrctl start`|Listener start කරන්න|
+|`lsnrctl stop`|Listener stop කරන්න|
+|`lsnrctl reload`|Listener configuration reload කරන්න|
+|`tnsping ORCLDB`|TNS alias connectivity test කරන්න|
+|`sqlplus user/password@ORCLDB`|Database connect වෙන්න|
+
+SQL commands:
+
+```
+SELECT name FROM v$database;
+```
+
+Database name බලන්න.
+
+```
+SELECT instance_name FROM v$instance;
+```
+
+Instance name බලන්න.
+
+```
+SHOW PARAMETER service_names;
+```
+
+Configured service names බලන්න.
+
+```
+SELECT * FROM v$services;
+```
+
+Available database services බලන්න.
+  
+  
+  
+  
+  
+  
